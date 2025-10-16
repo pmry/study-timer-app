@@ -1,0 +1,35 @@
+{
+  "name": "study-timer",
+  "version": "1.0.0",
+  "description": "A pixel art study timer application.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "pmry",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^38.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.studytimer",
+    "productName": "Study Timer",
+    "files": [
+      "study.html",
+      "style.css",
+      "script.js",
+      "main.js",
+      "preload.js",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}

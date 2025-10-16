@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">   
+</head>
+<body>
+
+    <div class="timer-app">
+        <div class="title-bar">                    
+            <span>Study Timer &lt;3</span>
+            <div class="window-controls">
+                <div class="control-btn minimize"><img src="assets/Minimize Button.svg" alt="minimize"></div>
+                <div class="control-btn close"><img src="assets/Close Button.svg" alt="close"></div>
+            </div>
+        </div>
+
+        <div class="timer-body">
+            <img src="https://i.pinimg.com/originals/45/dd/0c/45dd0cf2f00c44283e53419f24980867.gif" alt="Pixel cat in space" class="timer-gif">
+            
+            <div id="mainTimeDisplay" class="time-display">30:00</div>
+            
+            <div class="timer-controls">
+                <button id="editButton" class="btn edit-btn">Edit/</button>
+                <button id="playPauseButton" class="btn play-pause-btn" aria-label="Play/Pause Timer">
+                    <img id="playPauseIcon" src="assets/Play Icon.svg" alt="Play Icon">
+                </button>
+                <button id="resetButton" class="btn reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div id="editModal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <div class="preset-grid">
+                    <button class="preset-btn" data-minutes="30">30 Min</button>
+                    <button class="preset-btn" data-minutes="45">45 Min</button>
+                    <button class="preset-btn" data-minutes="60">1 Hour</button>
+                    <button class="preset-btn" data-minutes="600">10 Hour</button>
+                </div>
+
+                <input type="text" id="modalTimeInput" class="modal-time-input" value="30:00">
+
+                <div class="modal-actions">
+                    <button id="saveButton" class="btn save-btn">Save</button>
+                    <button id="cancelButton" class="btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

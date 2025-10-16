@@ -1,0 +1,186 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    color:rgba(217, 217, 217, 1);
+    background-color: transparent; 
+    overflow: hidden; /* --- THIS IS THE NEW LINE --- */
+}
+
+.timer-app {
+    width: 380px;
+    background-color: rgba(21, 18, 22, 1); /* Inner dark background */
+    border: 15px solid rgba(217, 217, 217, 1); /* Outer light pinkish-grey frame */
+    position: relative;
+}
+
+/* --- Title Bar --- */
+.title-bar {
+    background-color: rgba(217, 217, 217, 1);
+    color: #282336;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    -webkit-app-region: drag; 
+}
+
+.window-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    width: 25px;
+    height: 25px;
+    background-color: #282336;
+    color: #DDBED1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    -webkit-app-region: no-drag; 
+}
+
+/* --- Timer Body --- */
+.timer-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-gif {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    image-rendering: pixelated;
+}
+
+.time-display {
+    font-size: 50px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* --- Control Buttons --- */
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    background: none;
+    font-family: inherit;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.edit-btn, .reset-btn {
+    border: 3px solid #E485B8; /* Pinkish border */
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+.play-pause-btn {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.play-pause-btn img {
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* --- MODAL STYLES --- */
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #282336;
+    border: 3px solid #E485B8;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.preset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.preset-btn {
+    background-color: #ffffff;
+    color: #282336;
+    border: none;
+    padding: 10px 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-time-input {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 34px;
+    font-style: bold;
+    text-align: center;
+    width: 200px; /* Wider for HH:MM:SS */
+    padding: 10px;
+    outline: none;
+}
+
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.save-btn, .cancel-btn {
+    border: 3px solid #E485B8;
+    padding: 10px 20px;
+    font-size: 24px;
+}
