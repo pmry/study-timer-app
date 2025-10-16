@@ -14,7 +14,9 @@
     "electron": "^38.3.0",
     "electron-builder": "^24.13.3"
   },
-  "build": {
+
+
+"build": {
     "appId": "com.example.studytimer",
     "productName": "Study Timer",
     "files": [
@@ -26,7 +28,8 @@
       "assets/**/*"
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "assets/Study-timer.ico" 
     },
     "mac": {
       "target": "dmg"

@@ -10,12 +10,14 @@ const createWindow = () => {
     height: 575,
     frame: false,
     transparent: true,
+    icon: path.join(__dirname, 'assets/Study-timer.ico'), // <-- ADD THIS LINE
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true, 
       nodeIntegration: false,
     }
   });
+
 
   win.removeMenu();
   win.loadFile('study.html');
